@@ -1,10 +1,3 @@
-const vandaag = new Date();
-const huidigeDag = vandaag.getDay(); // 0 = zondag 1 = maandag ect.
+const huidigeDag = new Date().getDay(); // 0 = zondag, 1 = maandag, ..., 6 = zaterdag
 
-if (huidigeDag === 0) {
-    console.log("Vandaag is het zondag, lekker uitslapen!");
-} else if (huidigeDag === 6) {
-    console.log("Vandaag is het zaterdag, lekker uitslapen!");
-} else { // omdat zaterdag en zondag al een 
-    console.log("Ik moet naar school");
-}
+console.log(huidigeDag >= 1 && huidigeDag <= 5 ? "Ik moet naar school" : "Lekker uitslapen!");
